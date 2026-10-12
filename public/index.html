@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="sunny" id="body">
+  <div class="scene" id="scene">
+    <div class="sun"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="precip" id="precip"></div>
+  </div>
+
+  <main class="card">
+    <h1>Weather Calculator</h1>
+    <div class="fields">
+      <label>Temperature (°C)<input id="temp" type="number" value="28" step="0.1"></label>
+      <label>Humidity (%)<input id="humidity" type="number" value="60" min="1" max="100"></label>
+      <label>Wind (km/h)<input id="wind" type="number" value="10" min="0"></label>
+    </div>
+    <button id="go">Calculate</button>
+    <p id="error" class="error"></p>
+
+    <div class="results" id="results" hidden>
+      <div class="res"><span>Fahrenheit</span><b id="f"></b></div>
+      <div class="res"><span>Kelvin</span><b id="k"></b></div>
+      <div class="res"><span>Feels like</span><b id="feels"></b></div>
+      <div class="res"><span>Dew point</span><b id="dew"></b></div>
+      <div class="res wide"><span>Condition</span><b id="cond"></b></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
